@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.0">
+<eagle version="7.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="100" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="100" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -673,7 +673,8 @@ Source: http://www.national.com/ds/LP/LP2950.pdf</description>
 </package>
 <package name="TO252">
 <description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
-TS-003</description>
+TS-003&lt;br&gt;
+PAD-Name corrected by http://www.ti.com/lit/ds/symlink/lp2950-n.pdf</description>
 <wire x1="3.2766" y1="3.8354" x2="3.277" y2="-2.159" width="0.2032" layer="21"/>
 <wire x1="3.277" y1="-2.159" x2="-3.277" y2="-2.159" width="0.2032" layer="21"/>
 <wire x1="-3.277" y1="-2.159" x2="-3.2766" y2="3.8354" width="0.2032" layer="21"/>
@@ -684,9 +685,9 @@ TS-003</description>
 <wire x1="2.1082" y1="5.1054" x2="2.5654" y2="4.6482" width="0.2032" layer="51"/>
 <wire x1="2.5654" y1="4.6482" x2="2.5654" y2="3.937" width="0.2032" layer="51"/>
 <wire x1="2.5654" y1="3.937" x2="-2.5654" y2="3.937" width="0.2032" layer="51"/>
-<smd name="3" x="0" y="2.5" dx="5.4" dy="6.2" layer="1"/>
+<smd name="2" x="0" y="2.5" dx="5.4" dy="6.2" layer="1"/>
 <smd name="1" x="-2.28" y="-4.8" dx="1" dy="1.6" layer="1"/>
-<smd name="2" x="2.28" y="-4.8" dx="1" dy="1.6" layer="1"/>
+<smd name="3" x="2.28" y="-4.8" dx="1" dy="1.6" layer="1"/>
 <text x="-3.81" y="-2.54" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="5.08" y="-2.54" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 <rectangle x1="-2.7178" y1="-5.1562" x2="-1.8542" y2="-2.2606" layer="51"/>
@@ -2076,7 +2077,7 @@ Source: http://www.national.com/ds/LP/LP2950.pdf</description>
 </deviceset>
 <deviceset name="LP2950" prefix="IC">
 <description>&lt;b&gt;Adjustable Micropower Voltage Regulator&lt;/b&gt;&lt;p&gt;
-Source: http://www.national.com/ds/LP/LP2950.pdf</description>
+PIN-Connection corrected by http://www.ti.com/lit/ds/symlink/lp2950-n.pdf&lt;br&gt;</description>
 <gates>
 <gate name="G$1" symbol="LP2950" x="0" y="0"/>
 </gates>
@@ -2084,8 +2085,8 @@ Source: http://www.national.com/ds/LP/LP2950.pdf</description>
 <device name="Z" package="TO92">
 <connects>
 <connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="O" pad="3"/>
+<connect gate="G$1" pin="IN" pad="3"/>
+<connect gate="G$1" pin="O" pad="1"/>
 </connects>
 <technologies>
 <technology name="">
@@ -2160,9 +2161,9 @@ Source: &lt;a href="http://www.national.com/ds/LM/LM2936.pdf"&gt; Data sheet&lt;
 <devices>
 <device name="DT" package="TO252">
 <connects>
-<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="VIN" pad="1"/>
-<connect gate="G$1" pin="VO" pad="2"/>
+<connect gate="G$1" pin="VO" pad="3"/>
 </connects>
 <technologies>
 <technology name="-3.0">
